@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TabBarViewController.swift
 //  CloudHospital
 //
 //  Created by wangankui on 21/12/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
