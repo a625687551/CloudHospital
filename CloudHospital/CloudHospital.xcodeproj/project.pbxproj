@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */; };
-		111DDF041FE8E4CB00A2C357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF031FE8E4CB00A2C357 /* ViewController.swift */; };
 		111DDF071FE8E4CB00A2C357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF051FE8E4CB00A2C357 /* Main.storyboard */; };
 		111DDF091FE8E4CB00A2C357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF081FE8E4CB00A2C357 /* Assets.xcassets */; };
 		111DDF0C1FE8E4CB00A2C357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF0A1FE8E4CB00A2C357 /* LaunchScreen.storyboard */; };
 		111DDF171FE8E4CB00A2C357 /* CloudHospitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF161FE8E4CB00A2C357 /* CloudHospitalTests.swift */; };
 		111DDF221FE8E4CB00A2C357 /* CloudHospitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF211FE8E4CB00A2C357 /* CloudHospitalUITests.swift */; };
+		119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196C51FEB989100B304E5 /* HomepageViewController.swift */; };
+		119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D41FEB9D2F00B304E5 /* MessageViewController.swift */; };
+		119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D61FEB9D4400B304E5 /* ServiceViewController.swift */; };
+		119196D91FEB9D5900B304E5 /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D81FEB9D5900B304E5 /* HealthViewController.swift */; };
+		119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196DA1FEB9D9D00B304E5 /* MeViewController.swift */; };
+		119196DD1FEBA34200B304E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196DC1FEBA34200B304E5 /* ViewController.swift */; };
+		119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		111DDEFE1FE8E4CB00A2C357 /* CloudHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		111DDF031FE8E4CB00A2C357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		111DDF061FE8E4CB00A2C357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		111DDF081FE8E4CB00A2C357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		111DDF0B1FE8E4CB00A2C357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		111DDF1D1FE8E4CB00A2C357 /* CloudHospitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudHospitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		111DDF211FE8E4CB00A2C357 /* CloudHospitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudHospitalUITests.swift; sourceTree = "<group>"; };
 		111DDF231FE8E4CB00A2C357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		119196C51FEB989100B304E5 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		119196D41FEB9D2F00B304E5 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		119196D61FEB9D4400B304E5 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		119196D81FEB9D5900B304E5 /* HealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
+		119196DA1FEB9D9D00B304E5 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		119196DC1FEBA34200B304E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,11 @@
 		111DDF001FE8E4CB00A2C357 /* CloudHospital */ = {
 			isa = PBXGroup;
 			children = (
+				119196C11FEB981100B304E5 /* Sources */,
+				119196BE1FEB97D600B304E5 /* Resources */,
 				111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */,
-				111DDF031FE8E4CB00A2C357 /* ViewController.swift */,
-				111DDF051FE8E4CB00A2C357 /* Main.storyboard */,
-				111DDF081FE8E4CB00A2C357 /* Assets.xcassets */,
-				111DDF0A1FE8E4CB00A2C357 /* LaunchScreen.storyboard */,
-				111DDF0D1FE8E4CB00A2C357 /* Info.plist */,
+				119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */,
+				119196DC1FEBA34200B304E5 /* ViewController.swift */,
 			);
 			path = CloudHospital;
 			sourceTree = "<group>";
@@ -123,6 +134,149 @@
 				111DDF231FE8E4CB00A2C357 /* Info.plist */,
 			);
 			path = CloudHospitalUITests;
+			sourceTree = "<group>";
+		};
+		119196BE1FEB97D600B304E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				111DDF081FE8E4CB00A2C357 /* Assets.xcassets */,
+				111DDF0A1FE8E4CB00A2C357 /* LaunchScreen.storyboard */,
+				111DDF0D1FE8E4CB00A2C357 /* Info.plist */,
+				111DDF051FE8E4CB00A2C357 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		119196C11FEB981100B304E5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				119196D11FEB9CD200B304E5 /* Me */,
+				119196CD1FEB9C8300B304E5 /* Health */,
+				119196CA1FEB9B4F00B304E5 /* Service */,
+				119196C71FEB9B0B00B304E5 /* Message */,
+				119196C21FEB982000B304E5 /* Homepage */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		119196C21FEB982000B304E5 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				119196C41FEB984300B304E5 /* Views */,
+				119196C31FEB983500B304E5 /* Controllers */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		119196C31FEB983500B304E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				119196C51FEB989100B304E5 /* HomepageViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		119196C41FEB984300B304E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		119196C71FEB9B0B00B304E5 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				119196C91FEB9B2800B304E5 /* Views */,
+				119196C81FEB9B1F00B304E5 /* Controllers */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		119196C81FEB9B1F00B304E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				119196D41FEB9D2F00B304E5 /* MessageViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		119196C91FEB9B2800B304E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		119196CA1FEB9B4F00B304E5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				119196CC1FEB9C7600B304E5 /* Views */,
+				119196CB1FEB9C6C00B304E5 /* Controllers */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		119196CB1FEB9C6C00B304E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				119196D61FEB9D4400B304E5 /* ServiceViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		119196CC1FEB9C7600B304E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		119196CD1FEB9C8300B304E5 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				119196D01FEB9CB000B304E5 /* Views */,
+				119196CF1FEB9CA700B304E5 /* Controllers */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		119196CF1FEB9CA700B304E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				119196D81FEB9D5900B304E5 /* HealthViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		119196D01FEB9CB000B304E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		119196D11FEB9CD200B304E5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				119196D31FEB9CFA00B304E5 /* Views */,
+				119196D21FEB9CF200B304E5 /* Controllers */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		119196D21FEB9CF200B304E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				119196DA1FEB9D9D00B304E5 /* MeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		119196D31FEB9CFA00B304E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111DDF041FE8E4CB00A2C357 /* ViewController.swift in Sources */,
+				119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */,
+				119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */,
 				111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */,
+				119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */,
+				119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */,
+				119196DD1FEBA34200B304E5 /* ViewController.swift in Sources */,
+				119196D91FEB9D5900B304E5 /* HealthViewController.swift in Sources */,
+				119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
