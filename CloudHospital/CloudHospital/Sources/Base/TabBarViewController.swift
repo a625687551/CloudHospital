@@ -13,17 +13,9 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.setupItemAttrs()
-        self.addAllChildViewControllers()
-    }
-    
-    func setupItemAttrs() {
-        let normal = [NSAttributedStringKey.foregroundColor: UIColor.gray]
-        let selected = [NSAttributedStringKey.foregroundColor: UIColor.green]
+        UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.theme], for: .selected)
         
-        let item = UITabBarItem.appearance()
-        item.setTitleTextAttributes(normal, for: .normal)
-        item.setTitleTextAttributes(selected, for: .selected)
+        self.addAllChildViewControllers()
     }
     
     func addAllChildViewControllers() {
@@ -35,7 +27,12 @@ class TabBarViewController: UITabBarController {
     }
     
     func addViewController(child: UIViewController, title: String, normal: String, selected: String) {
-        child.tabBarItem = UITabBarItem(title: title, image: UIImage(named: normal), selectedImage: UIImage(named: selected))
-        self.addChildViewController(child)
+        let normalImage = UIImage(named: normal)?.withRenderingMode(.alwaysOriginal)
+        let selectedImage = UIImage(named: selected)?.withRenderingMode(.alwaysOriginal)
+        let tabBarItem = UITabBarItem(title: title, image: normalImage, selectedImage: selectedImage)
+        child.tabBarItem = tabBarItem
+        child.navigationItem.title = title
+        let nav = NavigationViewController(rootViewController: child)
+        self.addChildViewController(nav)
     }
 }

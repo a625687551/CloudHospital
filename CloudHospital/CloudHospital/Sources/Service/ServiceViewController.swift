@@ -14,6 +14,7 @@ class ServiceViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.orange
     }
 
     override func didReceiveMemoryWarning() {

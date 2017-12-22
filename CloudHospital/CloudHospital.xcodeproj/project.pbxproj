@@ -20,6 +20,8 @@
 		119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196DA1FEB9D9D00B304E5 /* MeViewController.swift */; };
 		119196DD1FEBA34200B304E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196DC1FEBA34200B304E5 /* ViewController.swift */; };
 		119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */; };
+		11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70631FEC96F500126EF5 /* NavigationViewController.swift */; };
+		11EE70691FECA47700126EF5 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70681FECA47700126EF5 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		119196DA1FEB9D9D00B304E5 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		119196DC1FEBA34200B304E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		11EE70631FEC96F500126EF5 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		11EE70681FECA47700126EF5 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +115,6 @@
 			children = (
 				119196C11FEB981100B304E5 /* Sources */,
 				119196BE1FEB97D600B304E5 /* Resources */,
-				111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */,
-				119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */,
 				119196DC1FEBA34200B304E5 /* ViewController.swift */,
 			);
 			path = CloudHospital;
@@ -150,6 +152,8 @@
 		119196C11FEB981100B304E5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				11EE706A1FECAAC900126EF5 /* Base */,
+				11EE70651FECA2BE00126EF5 /* Extensions */,
 				119196D11FEB9CD200B304E5 /* Me */,
 				119196CD1FEB9C8300B304E5 /* Health */,
 				119196CA1FEB9B4F00B304E5 /* Service */,
@@ -277,6 +281,24 @@
 			children = (
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		11EE70651FECA2BE00126EF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11EE70681FECA47700126EF5 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11EE706A1FECAAC900126EF5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */,
+				119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */,
+				11EE70631FEC96F500126EF5 /* NavigationViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,8 +436,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */,
+				11EE70691FECA47700126EF5 /* ColorExtensions.swift in Sources */,
 				119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */,
 				111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */,
+				11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */,
 				119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */,
 				119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */,
 				119196DD1FEBA34200B304E5 /* ViewController.swift in Sources */,
