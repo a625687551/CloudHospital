@@ -8,29 +8,55 @@
 
 import UIKit
 
-class HomepageViewController: UIViewController {
+class HomepageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.white
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.view.backgroundColor = UIColor.background
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+        switch indexPath.row {
+        case 0:
+            let identifier = "cycleScroll"
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! HomepageCycleScrollCell
+        case 1:
+            let identifier = "consultation"
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! HomepageConsultationCell
+            cell.configurrData()
+        case 2:
+            let identifier = "registered"
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! HomepageRegisteredCell
+            cell.configurrData()
+        default:
+            break
+        }
+    
+        return UITableViewCell()
+    }
+    
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 115
+        case 1:
+            return 210
+        case 2:
+            return 200
+        default:
+            return 0
+        }
+    }
 }
+

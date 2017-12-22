@@ -22,6 +22,12 @@
 		119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */; };
 		11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70631FEC96F500126EF5 /* NavigationViewController.swift */; };
 		11EE70691FECA47700126EF5 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70681FECA47700126EF5 /* ColorExtensions.swift */; };
+		11EE706D1FECB2D200126EF5 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EE706C1FECB2D200126EF5 /* Homepage.storyboard */; };
+		11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70721FECDEF100126EF5 /* HomepageConsultationCell.swift */; };
+		11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70741FECDF0A00126EF5 /* HomepageCycleScrollCell.swift */; };
+		11EE70771FECDFDD00126EF5 /* HomepageRegisteredCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70761FECDFDD00126EF5 /* HomepageRegisteredCell.swift */; };
+		11EE70791FECE03F00126EF5 /* HomepageOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70781FECE03F00126EF5 /* HomepageOtherCell.swift */; };
+		11EE707B1FECE08F00126EF5 /* HomepageHealthQACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE707A1FECE08F00126EF5 /* HomepageHealthQACell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		119196DE1FEBA54C00B304E5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		11EE70631FEC96F500126EF5 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		11EE70681FECA47700126EF5 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		11EE706C1FECB2D200126EF5 /* Homepage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
+		11EE70721FECDEF100126EF5 /* HomepageConsultationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageConsultationCell.swift; sourceTree = "<group>"; };
+		11EE70741FECDF0A00126EF5 /* HomepageCycleScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageCycleScrollCell.swift; sourceTree = "<group>"; };
+		11EE70761FECDFDD00126EF5 /* HomepageRegisteredCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRegisteredCell.swift; sourceTree = "<group>"; };
+		11EE70781FECE03F00126EF5 /* HomepageOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageOtherCell.swift; sourceTree = "<group>"; };
+		11EE707A1FECE08F00126EF5 /* HomepageHealthQACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageHealthQACell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +178,7 @@
 		119196C21FEB982000B304E5 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				11EE706B1FECB29900126EF5 /* Resources */,
 				119196C41FEB984300B304E5 /* Views */,
 				119196C31FEB983500B304E5 /* Controllers */,
 			);
@@ -183,6 +196,11 @@
 		119196C41FEB984300B304E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11EE70741FECDF0A00126EF5 /* HomepageCycleScrollCell.swift */,
+				11EE70721FECDEF100126EF5 /* HomepageConsultationCell.swift */,
+				11EE70761FECDFDD00126EF5 /* HomepageRegisteredCell.swift */,
+				11EE70781FECE03F00126EF5 /* HomepageOtherCell.swift */,
+				11EE707A1FECE08F00126EF5 /* HomepageHealthQACell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -301,6 +319,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		11EE706B1FECB29900126EF5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11EE706C1FECB2D200126EF5 /* Homepage.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EE706D1FECB2D200126EF5 /* Homepage.storyboard in Resources */,
 				111DDF0C1FE8E4CB00A2C357 /* LaunchScreen.storyboard in Resources */,
 				111DDF091FE8E4CB00A2C357 /* Assets.xcassets in Resources */,
 				111DDF071FE8E4CB00A2C357 /* Main.storyboard in Resources */,
@@ -436,14 +463,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */,
+				11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */,
 				11EE70691FECA47700126EF5 /* ColorExtensions.swift in Sources */,
+				11EE707B1FECE08F00126EF5 /* HomepageHealthQACell.swift in Sources */,
 				119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */,
 				111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */,
 				11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */,
 				119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */,
+				11EE70771FECDFDD00126EF5 /* HomepageRegisteredCell.swift in Sources */,
+				11EE70791FECE03F00126EF5 /* HomepageOtherCell.swift in Sources */,
 				119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */,
 				119196DD1FEBA34200B304E5 /* ViewController.swift in Sources */,
 				119196D91FEB9D5900B304E5 /* HealthViewController.swift in Sources */,
+				11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */,
 				119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
