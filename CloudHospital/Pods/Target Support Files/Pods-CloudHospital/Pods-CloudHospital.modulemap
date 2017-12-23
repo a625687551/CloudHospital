@@ -1,0 +1,6 @@
+framework module Pods_CloudHospital {
+  umbrella header "Pods-CloudHospital-umbrella.h"
+
+  export *
+  module * { export * }
+}
