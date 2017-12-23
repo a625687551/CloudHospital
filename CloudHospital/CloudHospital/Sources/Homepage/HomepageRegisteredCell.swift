@@ -30,19 +30,15 @@ class HomepageRegisteredCell: UITableViewCell {
 
     func configurrData() {
         let leftURL = URL(string: "https://hshospital.oss-cn-hangzhou.aliyuncs.com/0cfc4ed02d6c46b28162803d3084c567.png")!
-        let leftData = try? Data(contentsOf: leftURL)
-        self.leftmageView.image = UIImage(data: leftData!)
+        self.leftmageView.kf.setImage(with: leftURL)
         
         let topLeftURL = URL(string: "https://hshospital.oss-cn-hangzhou.aliyuncs.com/730219e7bfd642af867329745b02e602.png")!
-        let topLeftData = try? Data(contentsOf: topLeftURL)
-        self.topLeftImageView.image = UIImage(data: topLeftData!)
+        self.topLeftImageView.kf.setImage(with: topLeftURL)
         
         let topRightURL = URL(string: "https://hshospital.oss-cn-hangzhou.aliyuncs.com/99b9da248ba04c4882745f0868937700.png")!
-        let topRightData = try? Data(contentsOf: topRightURL)
-        self.topRightImageView.image = UIImage(data: topRightData!)
+        self.topRightImageView.kf.setImage(with: topRightURL)
         
         let bottomURL = URL(string: "https://hshospital.oss-cn-hangzhou.aliyuncs.com/1b8fbe1eb2f64add90f12182d6884f16.png")!
-        let bottomData = try? Data(contentsOf: bottomURL)
-        self.bottomImageView.image = UIImage(data: bottomData!)
+        self.bottomImageView.kf.setImage(with: bottomURL)
     }
 }

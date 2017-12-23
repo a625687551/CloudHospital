@@ -18,14 +18,16 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
         self.view.backgroundColor = UIColor.background
     }
     
-    
+}
+
+extension HomepageViewController {
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         switch indexPath.row {
         case 0:
             let identifier = "cycleScroll"
@@ -41,7 +43,7 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
         default:
             break
         }
-    
+        
         return UITableViewCell()
     }
     
@@ -55,8 +57,9 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
         case 2:
             return 200
         default:
-            return 0
+            break
         }
+        return 0
     }
 }
 
