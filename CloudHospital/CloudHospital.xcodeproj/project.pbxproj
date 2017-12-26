@@ -157,6 +157,21 @@
 			path = CloudHospitalUITests;
 			sourceTree = "<group>";
 		};
+		11464A3D1FF0E3B90016E56E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				11464A3E1FF0E3DD0016E56E /* Request */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		11464A3E1FF0E3DD0016E56E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		119196BE1FEB97D600B304E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +186,7 @@
 		119196C11FEB981100B304E5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				11464A3D1FF0E3B90016E56E /* Network */,
 				11EE706A1FECAAC900126EF5 /* Base */,
 				11EE70651FECA2BE00126EF5 /* Extensions */,
 				119196D11FEB9CD200B304E5 /* Me */,

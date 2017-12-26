@@ -191,7 +191,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="TqC-U5-6El" secondAttribute="bottom" constant="10" id="u1w-3l-9bY"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="bottomImageView" destination="okS-MA-Vc0" id="pQt-IW-Jy9"/>
                                             <outlet property="bottomLabel" destination="ePv-tA-eee" id="bN3-Nf-NSG"/>
