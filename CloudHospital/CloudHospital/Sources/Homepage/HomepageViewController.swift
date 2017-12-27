@@ -16,8 +16,9 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.background
+
+        HomepageRequestHelper().app()
     }
-    
 }
 
 extension HomepageViewController {
