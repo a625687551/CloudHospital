@@ -8,8 +8,9 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
-typealias CompletionHandler = ((_ request: BaseRequest, _ response: BaseResponse) -> ())
+typealias CompletionHandler = ((_ request: BaseRequest, _ response: Any) -> ())
 
 class BaseNetwork {
     static let shared = BaseNetwork()
@@ -19,30 +20,15 @@ class BaseNetwork {
               originalRequest request: BaseRequest,
               _ completionHandler: @escaping CompletionHandler) {
         
-        Alamofire.request(urlString, method: .get, parameters: parameters).responseJSON { response in
-            
-            print("-----------------------------")
+        Alamofire.request(urlString, method: .get, parameters: parameters)
+            .responseJSON { response in
+                
             switch response.result {
-            case .success(let json):
-                let dict = json as! Dictionary<String, Any>
-                
-                let origin = dict["origin"] as! String
-                let headers = dict["headers"] as! Dictionary<String, String>
-                
-                print("origin: \(origin)")
-                let ua = headers["User-Agent"]
-                print("UA: \(String(describing: ua))")
-                
-//                completionHandler(request, )
-
+            case .success(let value):
+                completionHandler(request, value)
             case .failure(let error):
-                print("\(error)")
-//                completionHandler(request, response)
+                completionHandler(request, error)
             }
-            
-            print("=============================")
-            print(response)
         }
-        
     }
 }

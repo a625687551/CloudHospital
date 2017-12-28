@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		111590821FF3749A00A6FC7B /* HomepageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111590811FF3749A00A6FC7B /* HomepageRequest.swift */; };
+		111590871FF47AA200A6FC7B /* HomepageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111590861FF47AA100A6FC7B /* HomepageModel.swift */; };
 		111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */; };
 		111DDF071FE8E4CB00A2C357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF051FE8E4CB00A2C357 /* Main.storyboard */; };
 		111DDF091FE8E4CB00A2C357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF081FE8E4CB00A2C357 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		111590811FF3749A00A6FC7B /* HomepageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRequest.swift; sourceTree = "<group>"; };
+		111590861FF47AA100A6FC7B /* HomepageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageModel.swift; sourceTree = "<group>"; };
 		111DDEFE1FE8E4CB00A2C357 /* CloudHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		111DDF061FE8E4CB00A2C357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 				111590811FF3749A00A6FC7B /* HomepageRequest.swift */,
 			);
 			name = Request;
+			sourceTree = "<group>";
+		};
+		111590851FF47A8500A6FC7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				111590861FF47AA100A6FC7B /* HomepageModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		111DDEF51FE8E4CB00A2C357 = {
@@ -222,6 +232,7 @@
 		119196C21FEB982000B304E5 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				111590851FF47A8500A6FC7B /* Model */,
 				111590801FF3746700A6FC7B /* Request */,
 				11EE706B1FECB29900126EF5 /* Resources */,
 				119196C41FEB984300B304E5 /* Views */,
@@ -607,6 +618,7 @@
 				119196DD1FEBA34200B304E5 /* ViewController.swift in Sources */,
 				119196D91FEB9D5900B304E5 /* HealthViewController.swift in Sources */,
 				11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */,
+				111590871FF47AA200A6FC7B /* HomepageModel.swift in Sources */,
 				119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

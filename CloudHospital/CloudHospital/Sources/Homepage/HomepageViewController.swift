@@ -17,7 +17,13 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
 
         self.view.backgroundColor = UIColor.background
 
-        HomepageRequestHelper().app()
+//        HomepageRequestHelper.app()
+        HomepageModel.homepage(parameters: [:]) { model in
+            print(model.args!)
+            print(model.headers!)
+            print(model.origin!)
+            print(model.url!)
+        }
     }
 }
 
