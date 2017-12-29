@@ -23,22 +23,7 @@ enum SerializationError: Error {
 }
 
 
-extension HomepageModel {
-//    init?(json: [String: Any]) {
-//        guard let args = json["args"] as? String,
-//            let headers = json["headers"] as? [String: Any],
-//            let origin = json["origin"] as? String,
-//            let url = json["url"] as? String
-//            else {
-//                return nil
-//        }
-//
-//        self.args = args
-//        self.headers = headers
-//        self.origin = origin
-//        self.url = url
-//    }
-    
+extension HomepageModel {    
     init(json: [String: Any]) throws {
         guard let args = json["args"] as? [String: Any] else {
             throw SerializationError.missing("args")
