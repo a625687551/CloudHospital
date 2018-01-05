@@ -1,9 +1,9 @@
 //
-//  ColorExtensions.swift
+//  UIColor.swift
 //  CloudHospital
 //
-//  Created by wangankui on 22/12/2017.
-//  Copyright © 2017 oneday. All rights reserved.
+//  Created by wangankui on 05/01/2018.
+//  Copyright © 2018 oneday. All rights reserved.
 //
 
 import UIKit
@@ -15,13 +15,13 @@ extension UIColor {
     static let black87 = UIColor(hex: 0x212121) // 87%
     static let black54 = UIColor(hex: 0x757575) // 54%
     static let black26 = UIColor(hex: 0xbdbdbd) // 26%
-
+    
     
     convenience init(red: Int, green: Int, blue: Int, alpha: Float) {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
-
+        
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha))
     }
     
