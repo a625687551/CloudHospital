@@ -121,6 +121,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1108F75920037433006DF3CD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1108F75A2003745D006DF3CD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1108F75B20037465006DF3CD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		111DDEF51FE8E4CB00A2C357 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +167,7 @@
 		111DDF001FE8E4CB00A2C357 /* CloudHospital */ = {
 			isa = PBXGroup;
 			children = (
-				119B13921FFF0E3F00F8F535 /* Protocols */,
+				1108F75920037433006DF3CD /* Protocols */,
 				119B13901FFF0DBA00F8F535 /* Configuration */,
 				119B138F1FFF0DAA00F8F535 /* Manager */,
 				119B138E1FFF0D8800F8F535 /* Resources */,
@@ -230,10 +251,10 @@
 		119B13881FFF0C1300F8F535 /* HomepageViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				119196C51FEB989100B304E5 /* HomepageViewController.swift */,
-				119B138B1FFF0C8000F8F535 /* Protocols */,
-				119B138A1FFF0C7500F8F535 /* ViewModels */,
+				1108F75A2003745D006DF3CD /* Protocols */,
 				119B13891FFF0C5A00F8F535 /* TableViewCells */,
+				1108F75B20037465006DF3CD /* ViewModels */,
+				119196C51FEB989100B304E5 /* HomepageViewController.swift */,
 			);
 			path = HomepageViewControllers;
 			sourceTree = "<group>";
@@ -248,20 +269,6 @@
 				11EE707A1FECE08F00126EF5 /* HomepageHealthQACell.swift */,
 			);
 			path = TableViewCells;
-			sourceTree = "<group>";
-		};
-		119B138A1FFF0C7500F8F535 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		119B138B1FFF0C8000F8F535 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		119B138C1FFF0CBE00F8F535 /* MessageViewControllers */ = {
@@ -306,13 +313,6 @@
 				111DDF0D1FE8E4CB00A2C357 /* Info.plist */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		119B13921FFF0E3F00F8F535 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		49E9680278A4E88C283C359E /* Frameworks */ = {
