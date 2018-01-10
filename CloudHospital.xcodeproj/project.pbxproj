@@ -170,13 +170,13 @@
 				1108F75920037433006DF3CD /* Protocols */,
 				119B13901FFF0DBA00F8F535 /* Configuration */,
 				119B138F1FFF0DAA00F8F535 /* Manager */,
-				119B138E1FFF0D8800F8F535 /* Resources */,
 				119B13871FFF0BDA00F8F535 /* Models */,
 				119B13861FFF0BCF00F8F535 /* Storyboards */,
 				119B13851FFF0BC200F8F535 /* Viewcontrollers */,
 				119B13841FFF0BA000F8F535 /* Extensions */,
-				119B13911FFF0DCC00F8F535 /* SupportingFiles */,
 				119B13831FFF0B7500F8F535 /* Delegates */,
+				119B13911FFF0DCC00F8F535 /* SupportingFiles */,
+				119B138E1FFF0D8800F8F535 /* Resources */,
 			);
 			path = CloudHospital;
 			sourceTree = "<group>";

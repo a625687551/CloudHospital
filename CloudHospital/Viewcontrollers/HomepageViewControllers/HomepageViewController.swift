@@ -18,12 +18,25 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
         self.view.backgroundColor = UIColor.background
 
 //        HomepageRequestHelper.app()
-        HomepageModel.homepage(parameters: [:]) { model in
-            print(model.args!)
-            print(model.headers!)
-            print(model.origin!)
-            print(model.url!)
+//        HomepageModel.homepage(parameters: [:]) { model in
+//            print(model.args!)
+//            print(model.headers!)
+//            print(model.origin!)
+//            print(model.url!)
+//        }
+        
+//        DataManager.shared.dataAt(parameters: nil) { (response, error) in
+//            if let homepage = response as? Homepage {
+//                print(homepage.origin, homepage.url)
+//            }
+//        }
+        
+        let parameters: [String : Any]? = ["pltType": "APPFWC", "pageSize": 10, "pageNum": 1]
+        
+        DataManager.shared.start(parameters: parameters) { response, error in
+
         }
+        
     }
 }
 

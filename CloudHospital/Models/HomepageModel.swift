@@ -9,6 +9,18 @@
 import Foundation
 import SwiftyJSON
 
+
+struct Homepage: Codable {
+//    let args: [String: Any]
+//    let headers: [String: Any]
+    let origin: String
+    let url: String
+}
+
+
+
+
+
 struct HomepageModel {
     var args: [String: Any]?
     var headers: [String: Any]?
