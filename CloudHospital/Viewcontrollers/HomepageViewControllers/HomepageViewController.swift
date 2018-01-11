@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomepageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -31,12 +32,16 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
 //            }
 //        }
         
-        let parameters: [String : Any]? = ["pltType": "APPFWC", "pageSize": 10, "pageNum": 1]
-        
-        DataManager.shared.start(parameters: parameters) { response, error in
+//        let parameters: [String : Any]? = ["pltType": "APPFWC", "pageSize": 10, "pageNum": 1]
+//
+//        DataManager.shared.start(parameters: parameters) { response, error in
+//
+//        }
+//
+        Webservice().start(resource: Episode.all) { (result) in
 
         }
-        
+
     }
 }
 

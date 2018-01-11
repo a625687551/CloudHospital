@@ -28,6 +28,8 @@
 		119B13961FFF0E8800F8F535 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13951FFF0E8800F8F535 /* DataManager.swift */; };
 		119B13981FFF0EB100F8F535 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13971FFF0EB100F8F535 /* UIColor.swift */; };
 		119B139A1FFF0ECA00F8F535 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13991FFF0ECA00F8F535 /* DispatchQueue.swift */; };
+		11A8B1862007427700B4DFAD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A8B1852007427700B4DFAD /* Router.swift */; };
+		11A8B18820075A8900B4DFAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A8B18720075A8900B4DFAD /* Resource.swift */; };
 		11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70631FEC96F500126EF5 /* NavigationViewController.swift */; };
 		11EE706D1FECB2D200126EF5 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EE706C1FECB2D200126EF5 /* Homepage.storyboard */; };
 		11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE70721FECDEF100126EF5 /* HomepageConsultationCell.swift */; };
@@ -83,6 +85,8 @@
 		119B13951FFF0E8800F8F535 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		119B13971FFF0EB100F8F535 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		119B13991FFF0ECA00F8F535 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		11A8B1852007427700B4DFAD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		11A8B18720075A8900B4DFAD /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		11EE70631FEC96F500126EF5 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		11EE706C1FECB2D200126EF5 /* Homepage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
 		11EE70721FECDEF100126EF5 /* HomepageConsultationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageConsultationCell.swift; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				119B13951FFF0E8800F8F535 /* DataManager.swift */,
+				11A8B18720075A8900B4DFAD /* Resource.swift */,
+				11A8B1852007427700B4DFAD /* Router.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 				119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */,
 				119B13941FFF0E6C00F8F535 /* Configuration.swift in Sources */,
 				119B13981FFF0EB100F8F535 /* UIColor.swift in Sources */,
+				11A8B18820075A8900B4DFAD /* Resource.swift in Sources */,
 				119B139A1FFF0ECA00F8F535 /* DispatchQueue.swift in Sources */,
 				111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */,
 				11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */,
@@ -546,6 +553,7 @@
 				119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */,
 				11EE70771FECDFDD00126EF5 /* HomepageRegisteredCell.swift in Sources */,
 				11EE70791FECE03F00126EF5 /* HomepageOtherCell.swift in Sources */,
+				11A8B1862007427700B4DFAD /* Router.swift in Sources */,
 				119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */,
 				119196D91FEB9D5900B304E5 /* HealthViewController.swift in Sources */,
 				11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */,
