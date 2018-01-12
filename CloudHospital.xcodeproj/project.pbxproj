@@ -298,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				119B13951FFF0E8800F8F535 /* DataManager.swift */,
-				11A8B18720075A8900B4DFAD /* Resource.swift */,
 				11A8B1852007427700B4DFAD /* Router.swift */,
 			);
 			path = Manager;
@@ -308,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				119B13931FFF0E6C00F8F535 /* Configuration.swift */,
+				11A8B18720075A8900B4DFAD /* Resource.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
