@@ -51,8 +51,21 @@ extension Router: URLRequestConvertible {
             return url
         }
         
+        var HTTPHeaders: [String : String]? {
+            var headers = [String : String]()
+            switch self {
+            case .get:
+                break
+            case .post:
+                headers = [:]
+            }
+            return headers
+        }
+        
+        
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        request.allHTTPHeaderFields = HTTPHeaders
         let encoding = JSONEncoding.default
         
         return try encoding.encode(request, with: params)

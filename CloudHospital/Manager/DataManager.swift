@@ -20,10 +20,20 @@ final class DataManager {
     
     typealias CompletionHandler = (Any?, Error?) -> Void
     
-    func start(parameters: [String: Any]?, completion: @escaping CompletionHandler) {        
-        Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+    func start(parameters: [String: Any]?, completion: @escaping CompletionHandler) {
+        let headers: [String: String]? = ["prdCode": "YUN-000001",
+                                          "client_id": "440000@310000",
+                                          "terminalType": "2",
+                                          "version": "2.2.0",
+                                          "Accept": "application/json",
+                                          "Content-Type": "application/json",
+                                          "unicode": "e5b8d55ad2204ff98449cd0fa0ebcf7d",
+                                          "signature": "m7KRLW34xDBQNn7nw/PQqQ/CqEmRmgJhQwwI0661n/oPvprz/oWEwqZHkLB0eKBqDAaEqmG9YnkegQS1bEKxQfXcE9aeTXXh8NngSJd25rTYXmXsuxLTcvqYuX8P8PJVuOUqEPBGJeQ9LCzwe0sHgBIBy2V8Vv1LlPP4EbD7+N4="
+                                          ]
+        
+        Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
-                
+
                 switch response.result {
                 case .success(let value):
                     completion(value, nil)
@@ -67,6 +77,5 @@ final class DataManager {
 //        else {
 //            completion(nil, .unknown)
 //        }
-        
     }
 }
