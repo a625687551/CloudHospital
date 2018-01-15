@@ -17,6 +17,8 @@
 		111DDF221FE8E4CB00A2C357 /* CloudHospitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF211FE8E4CB00A2C357 /* CloudHospitalUITests.swift */; };
 		11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11464A3F1FF1E2360016E56E /* BaseNetwork.swift */; };
 		11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11464A411FF1E2440016E56E /* BaseRequest.swift */; };
+		1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146D943200C9B9500BA467F /* ResponseErrorKind.swift */; };
+		1146D946200C9E2B00BA467F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146D945200C9E2B00BA467F /* String.swift */; };
 		11659CB21FF33CC1004A8271 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11659CB11FF33CC1004A8271 /* BaseResponse.swift */; };
 		119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196C51FEB989100B304E5 /* HomepageViewController.swift */; };
 		119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D41FEB9D2F00B304E5 /* MessageViewController.swift */; };
@@ -74,6 +76,8 @@
 		111DDF231FE8E4CB00A2C357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11464A3F1FF1E2360016E56E /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		11464A411FF1E2440016E56E /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		1146D943200C9B9500BA467F /* ResponseErrorKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseErrorKind.swift; sourceTree = "<group>"; };
+		1146D945200C9E2B00BA467F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		11659CB11FF33CC1004A8271 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		119196C51FEB989100B304E5 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		119196D41FEB9D2F00B304E5 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 			children = (
 				119B13971FFF0EB100F8F535 /* UIColor.swift */,
 				119B13991FFF0ECA00F8F535 /* DispatchQueue.swift */,
+				1146D945200C9E2B00BA467F /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 			children = (
 				119B13951FFF0E8800F8F535 /* DataManager.swift */,
 				11A8B1852007427700B4DFAD /* Router.swift */,
+				1146D943200C9B9500BA467F /* ResponseErrorKind.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 				11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */,
 				11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */,
 				11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */,
+				1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */,
 				11EE707B1FECE08F00126EF5 /* HomepageHealthQACell.swift in Sources */,
 				111590821FF3749A00A6FC7B /* HomepageRequest.swift in Sources */,
 				119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */,
@@ -549,6 +556,7 @@
 				119B139A1FFF0ECA00F8F535 /* DispatchQueue.swift in Sources */,
 				111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */,
 				11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */,
+				1146D946200C9E2B00BA467F /* String.swift in Sources */,
 				11659CB21FF33CC1004A8271 /* BaseResponse.swift in Sources */,
 				119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */,
 				11EE70771FECDFDD00126EF5 /* HomepageRegisteredCell.swift in Sources */,

@@ -18,7 +18,7 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
 
         self.view.backgroundColor = UIColor.background
     
-        let parameters: [String : Any]? = nil //["versionType": 0, "terminalType": 2, "curUpVersion": "2.2.0"]
+        let parameters: [String : Any]? = nil 
         DataManager.shared.start(parameters: parameters) { response, error in
             
         }

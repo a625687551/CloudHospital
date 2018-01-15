@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 final class DataManager {
     private let baseURL : URL
@@ -27,8 +28,11 @@ final class DataManager {
                                           "version": "2.2.0",
                                           "Accept": "application/json",
                                           "Content-Type": "application/json",
-                                          "unicode": "e5b8d55ad2204ff98449cd0fa0ebcf7d",
-                                          "signature": "m7KRLW34xDBQNn7nw/PQqQ/CqEmRmgJhQwwI0661n/oPvprz/oWEwqZHkLB0eKBqDAaEqmG9YnkegQS1bEKxQfXcE9aeTXXh8NngSJd25rTYXmXsuxLTcvqYuX8P8PJVuOUqEPBGJeQ9LCzwe0sHgBIBy2V8Vv1LlPP4EbD7+N4="
+                                          "Host": "gd.hsyuntai.com:8663",
+                                          "User-Agent": "hundsun_cloud_health/2.2.0 (iPhone; iOS 11.2; Scale/3.00)",
+                                          "Accept-Language": "en;q=1"
+//                                          "unicode": "e5b8d55ad2204ff98449cd0fa0ebcf7d",
+//                                          "signature": "m7KRLW34xDBQNn7nw/PQqQ/CqEmRmgJhQwwI0661n/oPvprz/oWEwqZHkLB0eKBqDAaEqmG9YnkegQS1bEKxQfXcE9aeTXXh8NngSJd25rTYXmXsuxLTcvqYuX8P8PJVuOUqEPBGJeQ9LCzwe0sHgBIBy2V8Vv1LlPP4EbD7+N4="
                                           ]
         
         Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
@@ -36,13 +40,30 @@ final class DataManager {
 
                 switch response.result {
                 case .success(let value):
-                    completion(value, nil)
+                    self.handleResponse(value, completion: completion)
                 case .failure(let error):
                     completion(nil, error)
                 }
         }
     }
     
+    
+    
+    private func handleResponse(_ response: Any, completion: CompletionHandler) {
+        let json = JSON(response)
+        if json["result"].boolValue {
+            completion(json, nil)
+        } else {
+            guard let kind = json["kind"].string as? String else {
+                return
+            }
+            
+            let erroeKind = ResponseErrorKind(kind)
+            
+            
+            completion(nil, nil)
+        }
+    }
     
     
     
