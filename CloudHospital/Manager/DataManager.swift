@@ -11,30 +11,32 @@ import Alamofire
 import SwiftyJSON
 
 final class DataManager {
-    private let baseURL : URL
+    private var baseURL : URL
+    
+    var headers: [String: String]? = ["prdCode": "YUN-000001",
+                                      "client_id": "440000@310000",
+                                      "terminalType": "2",
+                                      "version": "2.2.0",
+                                      "Accept": "application/json",
+                                      "Content-Type": "application/json",
+                                      "Host": "120.26.224.231:8080",
+                                      "Accept-Language": "en;q=1",
+                                      "User-Agent": "hundsun_cloud_health/2.2.0 (iPhone; iOS 11.2; Scale/3.00)"]
     
     init(baseURL: URL) {
         self.baseURL = baseURL
     }
+    
     
     static let shared = DataManager(baseURL: API.authenticatedURL)
     
     typealias CompletionHandler = (Any?, Error?) -> Void
     
     func start(parameters: [String: Any]?, completion: @escaping CompletionHandler) {
-        let headers: [String: String]? = ["prdCode": "YUN-000001",
-                                          "client_id": "440000@310000",
-                                          "terminalType": "2",
-                                          "version": "2.2.0",
-                                          "Accept": "application/json",
-                                          "Content-Type": "application/json",
-                                          "Host": "gd.hsyuntai.com:8663",
-                                          "User-Agent": "hundsun_cloud_health/2.2.0 (iPhone; iOS 11.2; Scale/3.00)",
-                                          "Accept-Language": "en;q=1"
-//                                          "unicode": "e5b8d55ad2204ff98449cd0fa0ebcf7d",
-//                                          "signature": "m7KRLW34xDBQNn7nw/PQqQ/CqEmRmgJhQwwI0661n/oPvprz/oWEwqZHkLB0eKBqDAaEqmG9YnkegQS1bEKxQfXcE9aeTXXh8NngSJd25rTYXmXsuxLTcvqYuX8P8PJVuOUqEPBGJeQ9LCzwe0sHgBIBy2V8Vv1LlPP4EbD7+N4="
-                                          ]
         
+        unicodeRequest()
+        
+        headers!["signature"] = "m7KRLW34xDBQNn7nw/PQqQ/P2WtBrW7guKXJEElGszz8qyU/UpQu5NPml/t5zKGxuuJ+bWjHVg7xRf+e4PqIqzIaXgm+vRah01VU1wejmAke/8l/8G64eP8UmDQVmIPWpUzpnbz7hcgni3ImSxfhccOYpd8KJqKQjs+wxN1AcaqkVgS3SERKWrn+DU/kn2r63w="
         Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
 
@@ -47,25 +49,44 @@ final class DataManager {
         }
     }
     
-    
-    
     private func handleResponse(_ response: Any, completion: CompletionHandler) {
         let json = JSON(response)
         if json["result"].boolValue {
             completion(json, nil)
         } else {
-            guard let kind = json["kind"].string as? String else {
-                return
+            guard let kind = json["kind"].string else { return }
+            guard let errorKind = ResponseErrorKind(kind) else { return }
+            
+            if errorKind.moudleType == 10000 {
+                switch errorKind.errorCode {
+                case 3, 4, 7:
+                    unicodeRequest()
+                    
+                default:
+                    break
+                }
             }
-            
-            let erroeKind = ResponseErrorKind(kind)
-            
             
             completion(nil, nil)
         }
     }
     
-    
+    func unicodeRequest() {
+        headers!["signature"] = "m7KRLW34xDBQNn7nw/PQqQ/P2WtBrW7guKXJEElGszz8qyU/UpQu5NPml/t5zKGxuuJ+bWjHVg7xRf+e4PqIqzIaXgm+vRah01VU1wejmAke/8l/8G64eP8UmDQVmIPWpUzpnbz7hcgni3ImSxfhccOYpd8KJqKQjs+wxN1AcaqkVgS3SERKWrn+DU/kn2r63w="
+        let date = Date.init().timeIntervalSince1970 * 1000
+        let parameters: [String: Any]? = ["terminalTime": date,
+                                          "devModel": "iPhone",
+                                          "terminalType": 2]
+        
+        Alamofire.request(API.unicodeURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                print(value)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
     
     func dataAt(parameters: [String: Any]?, completion: @escaping CompletionHandler) {

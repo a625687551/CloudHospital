@@ -23,7 +23,6 @@ class HomepageViewController: UIViewController, UITableViewDataSource, UITableVi
             
         }
 
-
     }
 }
 

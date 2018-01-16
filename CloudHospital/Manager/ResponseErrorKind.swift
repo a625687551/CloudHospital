@@ -14,20 +14,9 @@ struct ResponseErrorKind {
     var subModuleType: Int = 000
     var errorCode: Int = 000
     
-    private func isPureInt(string: String) -> Bool {
-        let scanner: Scanner = Scanner(string: string)
-        var val: Int = 0
-        return scanner.scanInt(&val) && scanner.isAtEnd
-    }
-
     init?(_ kind: String) {
-        guard kind.isEmpty else {
-            return nil
-        }
-        
-        guard !kind.isPureInt else {
-            return nil
-        }
+        guard !kind.isEmpty else { return nil }
+        guard kind.isPureInt else { return nil }
         
         if kind.count == 4 {
             errorCode = Int(kind)!
