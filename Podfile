@@ -9,6 +9,7 @@ pod 'Alamofire'
 pod 'Kingfisher'
 pod 'SnapKit'
 pod 'SwiftyJSON'
+pod 'KeychainAccess'
 
 end
 
