@@ -19,6 +19,9 @@
 		11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11464A411FF1E2440016E56E /* BaseRequest.swift */; };
 		1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146D943200C9B9500BA467F /* ResponseErrorKind.swift */; };
 		1146D946200C9E2B00BA467F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146D945200C9E2B00BA467F /* String.swift */; };
+		115C7DB8201B128D00213AD9 /* CloudAES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DB6201B128D00213AD9 /* CloudAES.cpp */; };
+		115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DB9201B12B800213AD9 /* CloudData.cpp */; };
+		115C7DBE201B132C00213AD9 /* CloudRSA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DBC201B132C00213AD9 /* CloudRSA.cpp */; };
 		11659CB21FF33CC1004A8271 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11659CB11FF33CC1004A8271 /* BaseResponse.swift */; };
 		119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196C51FEB989100B304E5 /* HomepageViewController.swift */; };
 		119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D41FEB9D2F00B304E5 /* MessageViewController.swift */; };
@@ -78,6 +81,16 @@
 		11464A411FF1E2440016E56E /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		1146D943200C9B9500BA467F /* ResponseErrorKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseErrorKind.swift; sourceTree = "<group>"; };
 		1146D945200C9E2B00BA467F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		115C7DB4201B113900213AD9 /* CloudHospital-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudHospital-Bridging-Header.h"; sourceTree = "<group>"; };
+		115C7DB6201B128D00213AD9 /* CloudAES.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CloudAES.cpp; sourceTree = "<group>"; };
+		115C7DB7201B128D00213AD9 /* CloudAES.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CloudAES.hpp; sourceTree = "<group>"; };
+		115C7DB9201B12B800213AD9 /* CloudData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CloudData.cpp; sourceTree = "<group>"; };
+		115C7DBA201B12B800213AD9 /* CloudData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CloudData.hpp; sourceTree = "<group>"; };
+		115C7DBC201B132C00213AD9 /* CloudRSA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CloudRSA.cpp; sourceTree = "<group>"; };
+		115C7DBD201B132C00213AD9 /* CloudRSA.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CloudRSA.hpp; sourceTree = "<group>"; };
+		115C7DC0201B145C00213AD9 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		115C7DC1201B145C00213AD9 /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
+		115C7DC2201B145C00213AD9 /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
 		11659CB11FF33CC1004A8271 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		119196C51FEB989100B304E5 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		119196D41FEB9D2F00B304E5 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +166,7 @@
 		111DDEF51FE8E4CB00A2C357 = {
 			isa = PBXGroup;
 			children = (
+				115C7DB4201B113900213AD9 /* CloudHospital-Bridging-Header.h */,
 				111DDF001FE8E4CB00A2C357 /* CloudHospital */,
 				111DDF151FE8E4CB00A2C357 /* CloudHospitalTests */,
 				111DDF201FE8E4CB00A2C357 /* CloudHospitalUITests */,
@@ -175,6 +189,8 @@
 		111DDF001FE8E4CB00A2C357 /* CloudHospital */ = {
 			isa = PBXGroup;
 			children = (
+				115C7DB5201B124500213AD9 /* CPlusPlus */,
+				115C7DB0201B102B00213AD9 /* ObjectiveC */,
 				1108F75920037433006DF3CD /* Protocols */,
 				119B13901FFF0DBA00F8F535 /* Configuration */,
 				119B138F1FFF0DAA00F8F535 /* Manager */,
@@ -205,6 +221,37 @@
 				111DDF231FE8E4CB00A2C357 /* Info.plist */,
 			);
 			path = CloudHospitalUITests;
+			sourceTree = "<group>";
+		};
+		115C7DB0201B102B00213AD9 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		115C7DB5201B124500213AD9 /* CPlusPlus */ = {
+			isa = PBXGroup;
+			children = (
+				115C7DB6201B128D00213AD9 /* CloudAES.cpp */,
+				115C7DB7201B128D00213AD9 /* CloudAES.hpp */,
+				115C7DB9201B12B800213AD9 /* CloudData.cpp */,
+				115C7DBA201B12B800213AD9 /* CloudData.hpp */,
+				115C7DBC201B132C00213AD9 /* CloudRSA.cpp */,
+				115C7DBD201B132C00213AD9 /* CloudRSA.hpp */,
+				115C7DBF201B142E00213AD9 /* utf8 */,
+			);
+			path = CPlusPlus;
+			sourceTree = "<group>";
+		};
+		115C7DBF201B142E00213AD9 /* utf8 */ = {
+			isa = PBXGroup;
+			children = (
+				115C7DC1201B145C00213AD9 /* checked.h */,
+				115C7DC0201B145C00213AD9 /* core.h */,
+				115C7DC2201B145C00213AD9 /* unchecked.h */,
+			);
+			path = utf8;
 			sourceTree = "<group>";
 		};
 		119B13831FFF0B7500F8F535 /* Delegates */ = {
@@ -548,12 +595,14 @@
 				11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */,
 				11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */,
 				11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */,
+				115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */,
 				1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */,
 				11EE707B1FECE08F00126EF5 /* HomepageHealthQACell.swift in Sources */,
 				111590821FF3749A00A6FC7B /* HomepageRequest.swift in Sources */,
 				119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */,
 				119B13941FFF0E6C00F8F535 /* Configuration.swift in Sources */,
 				119B13981FFF0EB100F8F535 /* UIColor.swift in Sources */,
+				115C7DBE201B132C00213AD9 /* CloudRSA.cpp in Sources */,
 				11A8B18820075A8900B4DFAD /* Resource.swift in Sources */,
 				119B139A1FFF0ECA00F8F535 /* DispatchQueue.swift in Sources */,
 				111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */,
@@ -568,6 +617,7 @@
 				119196D91FEB9D5900B304E5 /* HealthViewController.swift in Sources */,
 				11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */,
 				119B13961FFF0E8800F8F535 /* DataManager.swift in Sources */,
+				115C7DB8201B128D00213AD9 /* CloudAES.cpp in Sources */,
 				111590871FF47AA200A6FC7B /* HomepageModel.swift in Sources */,
 				119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */,
 			);
@@ -743,6 +793,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.oneday.CloudHospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloudHospital-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -760,6 +811,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.oneday.CloudHospital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloudHospital-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
