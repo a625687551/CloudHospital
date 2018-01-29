@@ -9,5 +9,7 @@
 #ifndef CloudHospital_Bridging_Header_h
 #define CloudHospital_Bridging_Header_h
 
+#import <AlipaySDK/AlipaySDK.h>
+
 
 #endif /* CloudHospital_Bridging_Header_h */
