@@ -10,7 +10,7 @@
 #define CloudHospital_Bridging_Header_h
 
 #import <AlipaySDK/AlipaySDK.h>
-#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #endif /* CloudHospital_Bridging_Header_h */

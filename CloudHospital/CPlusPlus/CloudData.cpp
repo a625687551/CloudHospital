@@ -9,8 +9,8 @@
 #include "CloudData.hpp"
 #include "utf8/checked.h"
 #include <string>
-//#include "evp.h"
-//#include "buffer.h"
+#import <openssl/evp.h>
+#import <openssl/buffer.h>
 
 CloudData::CloudData() {
     this->m_data = nullptr;
@@ -138,16 +138,53 @@ CloudData impl_data_utf8(const CloudData &data) {
     return CloudData();
 }
 
-//CloudData impl_data_base64_encode(const CloudData &data) {
-//    CloudData result;
-//    if (data.empty()) {
-//        return data;
-//    }
-//    
-////    BIO *b64 = BIO_new(BIO_f_base64());
-//}
+CloudData impl_data_base64_encode(const CloudData &data) {
+    CloudData result;
+    if (data.empty()) {
+        return data;
+    }
+    
+    BIO *b64 = BIO_new(BIO_f_base64());
+    BIO_set_flags(b64, BIO_FLAGS_BASE64_NO_NL);
+    BIO *bmem = BIO_new(BIO_s_mem());
+    b64 = BIO_push(b64, bmem);
+    BIO_write(b64, data.bytes(), (int)data.length());
+    BIO_flush(b64);
+    
+    BUF_MEM *buf = nullptr;
+    BIO_get_mem_ptr(b64, &buf);
+    if (buf) {
+        result = CloudData(buf->data, buf->length);
+    }
+    
+    BIO_free_all(b64);
+    
+    return result;
+}
 
-
+CloudData impl_data_base64_decode(const CloudData &data) {
+    CloudData result;
+    if (data.empty()) {
+        return data;
+    }
+    
+    BIO *b64 = BIO_new(BIO_f_base64());
+    BIO_set_flags(b64, BIO_FLAGS_BASE64_NO_NL);
+    BIO *bmem = BIO_new_mem_buf((void *)data.bytes(), (int)data.length());
+    bmem = BIO_push(b64, bmem);
+    
+    void *buf = malloc(data.length());
+    int len = BIO_read(bmem, buf, (int)data.length());
+    if (len >= 0) {
+        result = CloudData(buf, len);
+    }
+    
+    BIO_free_all(b64);
+    
+    free(buf);
+    
+    return result;
+}
 
 CloudData impl_data_shift(const CloudData &data, long shift) {
     if (data.empty()) {
@@ -197,27 +234,17 @@ CloudData impl_data_remove_random(const CloudData &data) {
 
 
 
-
-
-
 CloudDataHelper DataHelper;
 
 __attribute__((constructor)) static void impl_data_init() {
     DataHelper.data_file = impl_data_file;
+    DataHelper.data_utf8 = impl_data_utf8;
+    DataHelper.data_base64_encode = impl_data_base64_encode;
+    DataHelper.data_base64_decode = impl_data_base64_decode;
+    DataHelper.data_shift = impl_data_shift;
+    DataHelper.data_add_random = impl_data_add_random;
+    DataHelper.data_remove_random = impl_data_remove_random;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

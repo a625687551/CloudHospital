@@ -1026,7 +1026,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CloudHospital/Thirdparty/AlipaySDK",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CloudHospital/Thirdparty/AlipaySDK/openssl";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CloudHospital/Thirdparty/AlipaySDK";
 				INFOPLIST_FILE = CloudHospital/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1053,7 +1053,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CloudHospital/Thirdparty/AlipaySDK",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CloudHospital/Thirdparty/AlipaySDK/openssl";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CloudHospital/Thirdparty/AlipaySDK";
 				INFOPLIST_FILE = CloudHospital/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
