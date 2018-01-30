@@ -10,7 +10,6 @@
 #define CloudRSAKeyPair_hpp
 
 #include <stdio.h>
-#include "CloudRSA.hpp"
 #include "CloudData.hpp"
 #include <openssl/pem.h>
 
@@ -39,9 +38,11 @@ private:
 
 
 struct CloudRSAKeyPairHelper {
-    CloudRSAKeyPair (*rsa_keypari_create)(const CloudData &public_data, const CloudData &private_data);
+    CloudRSAKeyPair (*rsa_keypair_create)(const CloudData &public_data, const CloudData &private_data);
 };
 
 extern struct CloudRSAKeyPairHelper RSAKeyPairHelper;
+
+#define Cloud_RSA_KeyPair(public_data, private_data) RSAKeyPairHelper.rsa_keypair_create(public_data, private_data)
 
 #endif /* CloudRSAKeyPair_hpp */

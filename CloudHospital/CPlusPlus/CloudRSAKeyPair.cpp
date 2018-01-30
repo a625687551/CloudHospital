@@ -149,6 +149,6 @@ static CloudRSAKeyPair impl_rsa_keypair_create(const CloudData &public_data, con
 CloudRSAKeyPairHelper RSAKeyPairHelper;
 
 __attribute__((constructor)) static void impl_rsa_keypair_init() {
-    RSAKeyPairHelper.rsa_keypari_create = impl_rsa_keypair_create;
+    RSAKeyPairHelper.rsa_keypair_create = impl_rsa_keypair_create;
 }
 
