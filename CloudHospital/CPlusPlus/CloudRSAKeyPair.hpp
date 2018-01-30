@@ -1,0 +1,47 @@
+//
+//  CloudRSAKeyPair.hpp
+//  CloudHospital
+//
+//  Created by wangankui on 30/01/2018.
+//  Copyright © 2018 oneday. All rights reserved.
+//
+
+#ifndef CloudRSAKeyPair_hpp
+#define CloudRSAKeyPair_hpp
+
+#include <stdio.h>
+#include "CloudRSA.hpp"
+#include "CloudData.hpp"
+#include <openssl/pem.h>
+
+class CloudRSAKeyPair {
+    
+private:
+    RSA *public_rsa;
+    RSA *private_rsa;
+    
+public:
+    CloudRSAKeyPair();
+    CloudRSAKeyPair(const CloudRSAKeyPair &other);
+    ~CloudRSAKeyPair();
+    
+    CloudRSAKeyPair &operator=(const CloudRSAKeyPair &other);
+    
+    RSA * publicKey() const;
+    RSA * privateKey() const;
+    
+    void resetKey(int key_size);
+    void resetKey(const CloudData &data, bool is_public);
+    
+private:
+    void resetKeys(RSA *public_key, RSA *private_key);
+};
+
+
+struct CloudRSAKeyPairHelper {
+    CloudRSAKeyPair (*rsa_keypari_create)(const CloudData &public_data, const CloudData &private_data);
+};
+
+extern struct CloudRSAKeyPairHelper RSAKeyPairHelper;
+
+#endif /* CloudRSAKeyPair_hpp */

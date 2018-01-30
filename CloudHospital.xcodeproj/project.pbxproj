@@ -38,6 +38,7 @@
 		1192172F202022AF00B4FA47 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EF5B5D201EF8F20014C651 /* AlipaySDK.framework */; };
 		11921732202024F400B4FA47 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11921730202024F300B4FA47 /* libcrypto.a */; };
 		11921733202024F400B4FA47 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11921731202024F300B4FA47 /* libssl.a */; };
+		11921789202052C600B4FA47 /* CloudRSAKeyPair.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11921787202052C600B4FA47 /* CloudRSAKeyPair.cpp */; };
 		119B13941FFF0E6C00F8F535 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13931FFF0E6C00F8F535 /* Configuration.swift */; };
 		119B13961FFF0E8800F8F535 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13951FFF0E8800F8F535 /* DataManager.swift */; };
 		119B13981FFF0EB100F8F535 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13971FFF0EB100F8F535 /* UIColor.swift */; };
@@ -194,6 +195,8 @@
 		1192177D2020251000B4FA47 /* ebcdic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
 		1192177E2020251000B4FA47 /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
 		1192177F2020251000B4FA47 /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
+		11921787202052C600B4FA47 /* CloudRSAKeyPair.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CloudRSAKeyPair.cpp; sourceTree = "<group>"; };
+		11921788202052C600B4FA47 /* CloudRSAKeyPair.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CloudRSAKeyPair.hpp; sourceTree = "<group>"; };
 		119B13931FFF0E6C00F8F535 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		119B13951FFF0E8800F8F535 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		119B13971FFF0EB100F8F535 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 				115C7DBA201B12B800213AD9 /* CloudData.hpp */,
 				115C7DBC201B132C00213AD9 /* CloudRSA.cpp */,
 				115C7DBD201B132C00213AD9 /* CloudRSA.hpp */,
+				11921787202052C600B4FA47 /* CloudRSAKeyPair.cpp */,
+				11921788202052C600B4FA47 /* CloudRSAKeyPair.hpp */,
 				115C7DBF201B142E00213AD9 /* utf8 */,
 			);
 			path = CPlusPlus;
@@ -829,6 +834,7 @@
 				11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */,
 				11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */,
 				11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */,
+				11921789202052C600B4FA47 /* CloudRSAKeyPair.cpp in Sources */,
 				115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */,
 				1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */,
 				11EE707B1FECE08F00126EF5 /* HomepageHealthQACell.swift in Sources */,
