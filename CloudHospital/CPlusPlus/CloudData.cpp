@@ -112,7 +112,7 @@ void CloudData::reset(const void *data, size_t len) {
 
 
 
-CloudData impl_data_file(const char *path) {
+static CloudData impl_data_file(const char *path) {
     FILE *file = fopen(path, "r");
     if (!file) {
         return CloudData();
@@ -129,7 +129,7 @@ CloudData impl_data_file(const char *path) {
     return CloudData(buf, len, true);
 }
 
-CloudData impl_data_utf8(const CloudData &data) {
+static CloudData impl_data_utf8(const CloudData &data) {
     std::string text = std::string((char *)data.bytes(), data.length());
     if (utf8::is_valid(text.begin(), text.end())) {
         return data;
@@ -138,7 +138,7 @@ CloudData impl_data_utf8(const CloudData &data) {
     return CloudData();
 }
 
-CloudData impl_data_base64_encode(const CloudData &data) {
+static CloudData impl_data_base64_encode(const CloudData &data) {
     CloudData result;
     if (data.empty()) {
         return data;
@@ -162,7 +162,7 @@ CloudData impl_data_base64_encode(const CloudData &data) {
     return result;
 }
 
-CloudData impl_data_base64_decode(const CloudData &data) {
+static CloudData impl_data_base64_decode(const CloudData &data) {
     CloudData result;
     if (data.empty()) {
         return data;
@@ -186,7 +186,7 @@ CloudData impl_data_base64_decode(const CloudData &data) {
     return result;
 }
 
-CloudData impl_data_shift(const CloudData &data, long shift) {
+static CloudData impl_data_shift(const CloudData &data, long shift) {
     if (data.empty()) {
         return data;
     }
@@ -201,7 +201,7 @@ CloudData impl_data_shift(const CloudData &data, long shift) {
     return CloudData(buf, len, true);
 }
 
-CloudData impl_data_add_random(const CloudData &data) {
+static CloudData impl_data_add_random(const CloudData &data) {
     if (data.empty()) {
         return data;
     }
@@ -218,7 +218,7 @@ CloudData impl_data_add_random(const CloudData &data) {
     return CloudData(buf, len, true);
 }
 
-CloudData impl_data_remove_random(const CloudData &data) {
+static CloudData impl_data_remove_random(const CloudData &data) {
     if (data.empty()) {
         return data;
     }
@@ -245,6 +245,4 @@ __attribute__((constructor)) static void impl_data_init() {
     DataHelper.data_add_random = impl_data_add_random;
     DataHelper.data_remove_random = impl_data_remove_random;
 }
-
-
 

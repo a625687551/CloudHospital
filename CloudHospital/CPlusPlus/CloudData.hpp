@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 class CloudData {
+    
 private:
     void *m_data;
     size_t m_len;
@@ -38,10 +39,8 @@ private:
 struct CloudDataHelper {
     CloudData (*data_file)(const char *path);
     CloudData (*data_utf8)(const CloudData &data);
-    
     CloudData (*data_base64_encode)(const CloudData &data);
     CloudData (*data_base64_decode)(const CloudData &data);
-    
     CloudData (*data_shift)(const CloudData &data, long shift);
     CloudData (*data_add_random)(const CloudData &data);
     CloudData (*data_remove_random)(const CloudData &data);
