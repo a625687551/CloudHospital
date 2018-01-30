@@ -9,8 +9,8 @@
 #include "CloudData.hpp"
 #include "utf8/checked.h"
 #include <string>
-#include "evp.h"
-#include "buffer.h"
+//#include "evp.h"
+//#include "buffer.h"
 
 CloudData::CloudData() {
     this->m_data = nullptr;
@@ -48,8 +48,8 @@ CloudData::~CloudData() {
 CloudData & CloudData::operator=(const CloudData &other) {
     if (this != &other) {
         reset(other.bytes(), other.length());
-        return *this;
     }
+    return *this;
 }
 
 CloudData CloudData::operator+(const CloudData &other) const {
@@ -138,14 +138,14 @@ CloudData impl_data_utf8(const CloudData &data) {
     return CloudData();
 }
 
-CloudData impl_data_base64_encode(const CloudData &data) {
-    CloudData result;
-    if (data.empty()) {
-        return data;
-    }
-    
-    BIO *b64 = BIO_new(BIO_f_base64());
-}
+//CloudData impl_data_base64_encode(const CloudData &data) {
+//    CloudData result;
+//    if (data.empty()) {
+//        return data;
+//    }
+//    
+////    BIO *b64 = BIO_new(BIO_f_base64());
+//}
 
 
 
