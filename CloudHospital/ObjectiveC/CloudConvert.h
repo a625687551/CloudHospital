@@ -11,7 +11,7 @@
 struct CloudConvert {
     NSString * (*path)(NSString *name);
     NSData * (*data_file)(NSString *path);
-    NSData * (data_utf8_file)(NSString *data);
+    NSData * (*data_utf8_file)(NSString *path);
     NSString * (*data_to_string)(NSData *data);
     NSData * (*string_to_data)(NSString *string);
     

@@ -43,6 +43,4 @@ struct CloudRSAKeyPairHelper {
 
 extern struct CloudRSAKeyPairHelper RSAKeyPairHelper;
 
-#define Cloud_RSA_KeyPair(public_data, private_data) RSAKeyPairHelper.rsa_keypair_create(public_data, private_data)
-
 #endif /* CloudRSAKeyPair_hpp */

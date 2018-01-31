@@ -165,7 +165,7 @@ int CloudRSA::getFlen(int rsa_size, int padding) const {
 
 static CloudRSA impl_rsa_create(const CloudData &public_data, const CloudData &private_data) {
     CloudRSA rsa;
-    rsa.setPair(Cloud_RSA_KeyPair(public_data, private_data));
+    rsa.setPair(RSAKeyPairHelper.rsa_keypair_create(public_data, private_data));
     return rsa;
 }
 
