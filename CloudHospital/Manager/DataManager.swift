@@ -72,7 +72,7 @@ final class DataManager {
     }
     
     func unicodeRequest() {
-        headers!["signature"] = "m7KRLW34xDBQNn7nw/PQqQ/P2WtBrW7guKXJEElGszz8qyU/UpQu5NPml/t5zKGxuuJ+bWjHVg7xRf+e4PqIqzIaXgm+vRah01VU1wejmAke/8l/8G64eP8UmDQVmIPWpUzpnbz7hcgni3ImSxfhccOYpd8KJqKQjs+wxN1AcaqkVgS3SERKWrn+DU/kn2r63w="
+        headers!["signature"] = Convert.rsa_private_sign("")
         let date = Date.init().timeIntervalSince1970 * 1000
         let parameters: [String: Any]? = ["terminalTime": date,
                                           "devModel": "iPhone",
