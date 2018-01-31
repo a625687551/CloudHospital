@@ -24,6 +24,7 @@
 		115C7DBE201B132C00213AD9 /* CloudRSA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DBC201B132C00213AD9 /* CloudRSA.cpp */; };
 		11659CB21FF33CC1004A8271 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11659CB11FF33CC1004A8271 /* BaseResponse.swift */; };
 		1166060420214DA100F8B542 /* CloudConvert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1166060320214DA100F8B542 /* CloudConvert.mm */; };
+		116606062021A3EE00F8B542 /* UnicodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116606052021A3EE00F8B542 /* UnicodeModel.swift */; };
 		119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196C51FEB989100B304E5 /* HomepageViewController.swift */; };
 		119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D41FEB9D2F00B304E5 /* MessageViewController.swift */; };
 		119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D61FEB9D4400B304E5 /* ServiceViewController.swift */; };
@@ -111,6 +112,7 @@
 		11659CB11FF33CC1004A8271 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		1166060220214DA100F8B542 /* CloudConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudConvert.h; sourceTree = "<group>"; };
 		1166060320214DA100F8B542 /* CloudConvert.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CloudConvert.mm; sourceTree = "<group>"; };
+		116606052021A3EE00F8B542 /* UnicodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeModel.swift; sourceTree = "<group>"; };
 		119196C51FEB989100B304E5 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		119196D41FEB9D2F00B304E5 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		119196D61FEB9D4400B304E5 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -349,6 +351,13 @@
 			path = CloudHospitalUITests;
 			sourceTree = "<group>";
 		};
+		1147C40D2021BD8200127F45 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
 		115C7DB0201B102B00213AD9 /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +370,7 @@
 		115C7DB5201B124500213AD9 /* CPlusPlus */ = {
 			isa = PBXGroup;
 			children = (
+				1147C40D2021BD8200127F45 /* Key */,
 				115C7DB6201B128D00213AD9 /* CloudAES.cpp */,
 				115C7DB7201B128D00213AD9 /* CloudAES.hpp */,
 				115C7DB9201B12B800213AD9 /* CloudData.cpp */,
@@ -512,6 +522,7 @@
 				11464A3F1FF1E2360016E56E /* BaseNetwork.swift */,
 				11464A411FF1E2440016E56E /* BaseRequest.swift */,
 				11659CB11FF33CC1004A8271 /* BaseResponse.swift */,
+				116606052021A3EE00F8B542 /* UnicodeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -840,6 +851,7 @@
 				11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */,
 				11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */,
 				11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */,
+				116606062021A3EE00F8B542 /* UnicodeModel.swift in Sources */,
 				11921789202052C600B4FA47 /* CloudRSAKeyPair.cpp in Sources */,
 				115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */,
 				1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */,

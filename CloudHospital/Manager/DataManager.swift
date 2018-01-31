@@ -16,7 +16,7 @@ final class DataManager {
     var headers: [String: String]? = ["prdCode": "YUN-000001",
                                       "client_id": "440000@310000",
                                       "terminalType": "2",
-                                      "version": "2.2.0",
+                                      "version": "2.2.2",
                                       "Accept": "application/json",
                                       "Content-Type": "application/json",
                                       "Host": "120.26.224.231:8080",
@@ -36,7 +36,7 @@ final class DataManager {
         
         unicodeRequest()
         
-        headers!["signature"] = "m7KRLW34xDBQNn7nw/PQqQ/P2WtBrW7guKXJEElGszz8qyU/UpQu5NPml/t5zKGxuuJ+bWjHVg7xRf+e4PqIqzIaXgm+vRah01VU1wejmAke/8l/8G64eP8UmDQVmIPWpUzpnbz7hcgni3ImSxfhccOYpd8KJqKQjs+wxN1AcaqkVgS3SERKWrn+DU/kn2r63w="
+        headers!["signature"] = " "
         Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
 
@@ -72,11 +72,26 @@ final class DataManager {
     }
     
     func unicodeRequest() {
-        headers!["signature"] = Convert.rsa_private_sign("")
         let date = Date.init().timeIntervalSince1970 * 1000
         let parameters: [String: Any]? = ["terminalTime": date,
                                           "devModel": "iPhone",
                                           "terminalType": 2]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: JSONSerialization.WritingOptions.init(rawValue: 0))
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+//                let nsStr = jsonString as NSString
+                let rsaStr = Convert.rsa_private_sign(jsonString)
+                print(rsaStr)
+            }
+        } catch {
+            
+        }
+        
+        
+
+        
+        headers!["signature"] = Convert.rsa_private_sign("")
+        
         
         Alamofire.request(API.unicodeURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             switch response.result {

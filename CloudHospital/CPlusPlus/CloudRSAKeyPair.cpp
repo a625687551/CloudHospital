@@ -37,7 +37,7 @@ RSA * CloudRSAKeyPair::publicKey() const {
     return public_rsa;
 }
 
-RSA *CloudRSAKeyPair::privateKey() const {
+RSA * CloudRSAKeyPair::privateKey() const {
     return private_rsa;
 }
 
