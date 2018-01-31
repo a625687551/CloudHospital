@@ -23,6 +23,7 @@
 		115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DB9201B12B800213AD9 /* CloudData.cpp */; };
 		115C7DBE201B132C00213AD9 /* CloudRSA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DBC201B132C00213AD9 /* CloudRSA.cpp */; };
 		11659CB21FF33CC1004A8271 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11659CB11FF33CC1004A8271 /* BaseResponse.swift */; };
+		1166060420214DA100F8B542 /* CloudConvert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1166060320214DA100F8B542 /* CloudConvert.mm */; };
 		119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196C51FEB989100B304E5 /* HomepageViewController.swift */; };
 		119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D41FEB9D2F00B304E5 /* MessageViewController.swift */; };
 		119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D61FEB9D4400B304E5 /* ServiceViewController.swift */; };
@@ -39,7 +40,6 @@
 		11921732202024F400B4FA47 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11921730202024F300B4FA47 /* libcrypto.a */; };
 		11921733202024F400B4FA47 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11921731202024F300B4FA47 /* libssl.a */; };
 		11921789202052C600B4FA47 /* CloudRSAKeyPair.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11921787202052C600B4FA47 /* CloudRSAKeyPair.cpp */; };
-		1192178F202077A300B4FA47 /* Converter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1192178E202077A300B4FA47 /* Converter.mm */; };
 		119B13941FFF0E6C00F8F535 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13931FFF0E6C00F8F535 /* Configuration.swift */; };
 		119B13961FFF0E8800F8F535 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13951FFF0E8800F8F535 /* DataManager.swift */; };
 		119B13981FFF0EB100F8F535 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B13971FFF0EB100F8F535 /* UIColor.swift */; };
@@ -109,6 +109,8 @@
 		115C7DC1201B145C00213AD9 /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
 		115C7DC2201B145C00213AD9 /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
 		11659CB11FF33CC1004A8271 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		1166060220214DA100F8B542 /* CloudConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudConvert.h; sourceTree = "<group>"; };
+		1166060320214DA100F8B542 /* CloudConvert.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CloudConvert.mm; sourceTree = "<group>"; };
 		119196C51FEB989100B304E5 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		119196D41FEB9D2F00B304E5 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		119196D61FEB9D4400B304E5 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -198,8 +200,6 @@
 		1192177F2020251000B4FA47 /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
 		11921787202052C600B4FA47 /* CloudRSAKeyPair.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CloudRSAKeyPair.cpp; sourceTree = "<group>"; };
 		11921788202052C600B4FA47 /* CloudRSAKeyPair.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CloudRSAKeyPair.hpp; sourceTree = "<group>"; };
-		1192178D202077A300B4FA47 /* Converter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
-		1192178E202077A300B4FA47 /* Converter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Converter.mm; sourceTree = "<group>"; };
 		119B13931FFF0E6C00F8F535 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		119B13951FFF0E8800F8F535 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		119B13971FFF0EB100F8F535 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -352,8 +352,8 @@
 		115C7DB0201B102B00213AD9 /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
-				1192178D202077A300B4FA47 /* Converter.h */,
-				1192178E202077A300B4FA47 /* Converter.mm */,
+				1166060220214DA100F8B542 /* CloudConvert.h */,
+				1166060320214DA100F8B542 /* CloudConvert.mm */,
 			);
 			path = ObjectiveC;
 			sourceTree = "<group>";
@@ -836,7 +836,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */,
-				1192178F202077A300B4FA47 /* Converter.mm in Sources */,
+				1166060420214DA100F8B542 /* CloudConvert.mm in Sources */,
 				11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */,
 				11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */,
 				11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */,

@@ -1,14 +1,14 @@
 //
-//  Converter.h
+//  CloudConvert.h
 //  CloudHospital
 //
-//  Created by wangankui on 30/01/2018.
+//  Created by wangankui on 31/01/2018.
 //  Copyright © 2018 oneday. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-struct Converter {
+struct CloudConvert {
     NSString * (*path)(NSString *name);
     NSData * (*data_file)(NSString *path);
     NSData * (data_utf8_file)(NSString *data);
@@ -35,12 +35,7 @@ struct Converter {
     NSString * (*device_token)(void);
 };
 
-extern struct Converter Converter;
+extern struct CloudConvert Convert;
 
-
-
-#define NSData_RSA_Private_Sign(data) Converter.data_rsa_private_sign(data)
-
-
-
+#define NSData_RSA_Private_Sign(data) Convert.data_rsa_private_sign(data)
 
