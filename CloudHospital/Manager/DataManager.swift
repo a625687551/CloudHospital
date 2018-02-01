@@ -21,6 +21,7 @@ final class DataManager {
                                       "Content-Type": "application/json",
                                       "Host": "120.26.224.231:8080",
                                       "Accept-Language": "en;q=1",
+                                      "Accept-Encoding": "gzip, deflate",
                                       "User-Agent": "hundsun_cloud_health/2.2.0 (iPhone; iOS 11.2; Scale/3.00)"]
     
     init(baseURL: URL) {
@@ -36,17 +37,20 @@ final class DataManager {
         
         unicodeRequest()
         
-        headers!["signature"] = " "
-        Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
-            .responseJSON { response in
-
-                switch response.result {
-                case .success(let value):
-                    self.handleResponse(value, completion: completion)
-                case .failure(let error):
-                    completion(nil, error)
-                }
-        }
+//        let date = Int(Date.init().timeIntervalSince1970 * 1000)
+//        let rsaStr = Convert.rsa_public_encrypt(String(date))
+//        headers!["signature"] = rsaStr
+////        headers!["unicode"] = "9081ad35f0744c1289fe1f0451c407c0"
+//        Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+//            .responseJSON { response in
+//
+//                switch response.result {
+//                case .success(let value):
+//                    self.handleResponse(value, completion: completion)
+//                case .failure(let error):
+//                    completion(nil, error)
+//                }
+//        }
     }
     
     private func handleResponse(_ response: Any, completion: CompletionHandler) {
@@ -72,7 +76,7 @@ final class DataManager {
     }
     
     func unicodeRequest() {
-        let date = Date.init().timeIntervalSince1970 * 1000
+        let date = Int(Date.init().timeIntervalSince1970 * 1000)
         let parameters: [String: Any]? = ["terminalTime": date,
                                           "devModel": "iPhone",
                                           "terminalType": 2]
@@ -80,7 +84,7 @@ final class DataManager {
             let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: JSONSerialization.WritingOptions.init(rawValue: 0))
             if let jsonString = String(data: jsonData, encoding: .utf8) {
                 let rsaStr = Convert.rsa_private_sign(jsonString)
-                print(rsaStr ?? "")
+                headers!["signature"] = rsaStr
             }
         } catch {
             
@@ -89,7 +93,6 @@ final class DataManager {
         
 
         
-        headers!["signature"] = Convert.rsa_private_sign("")
         
         
         Alamofire.request(API.unicodeURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
