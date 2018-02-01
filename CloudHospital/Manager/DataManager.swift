@@ -37,20 +37,20 @@ final class DataManager {
         
         unicodeRequest()
         
-//        let date = Int(Date.init().timeIntervalSince1970 * 1000)
-//        let rsaStr = Convert.rsa_public_encrypt(String(date))
-//        headers!["signature"] = rsaStr
-////        headers!["unicode"] = "9081ad35f0744c1289fe1f0451c407c0"
-//        Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
-//            .responseJSON { response in
-//
-//                switch response.result {
-//                case .success(let value):
-//                    self.handleResponse(value, completion: completion)
-//                case .failure(let error):
-//                    completion(nil, error)
-//                }
-//        }
+        let date = Int(Date.init().timeIntervalSince1970 * 1000)
+        let rsaStr = Convert.rsa_public_encrypt(String(date))
+        headers!["signature"] = rsaStr
+//        headers!["unicode"] = "9081ad35f0744c1289fe1f0451c407c0"
+        Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .responseJSON { response in
+
+                switch response.result {
+                case .success(let value):
+                    self.handleResponse(value, completion: completion)
+                case .failure(let error):
+                    completion(nil, error)
+                }
+        }
     }
     
     private func handleResponse(_ response: Any, completion: CompletionHandler) {
@@ -77,13 +77,16 @@ final class DataManager {
     
     func unicodeRequest() {
         let date = Int(Date.init().timeIntervalSince1970 * 1000)
-        let parameters: [String: Any]? = ["terminalTime": date,
+        let parameters: [String: Any]? = ["terminalType": 2,
                                           "devModel": "iPhone",
-                                          "terminalType": 2]
+                                          "terminalTime": date
+                                          ]
         do {
-            let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: JSONSerialization.WritingOptions.init(rawValue: 0))
+            let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: JSONSerialization.WritingOptions.prettyPrinted)
             if let jsonString = String(data: jsonData, encoding: .utf8) {
                 let rsaStr = Convert.rsa_private_sign(jsonString)
+                print(jsonString)
+                print(parameters ?? "")
                 headers!["signature"] = rsaStr
             }
         } catch {
