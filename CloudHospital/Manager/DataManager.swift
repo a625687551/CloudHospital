@@ -79,9 +79,8 @@ final class DataManager {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: JSONSerialization.WritingOptions.init(rawValue: 0))
             if let jsonString = String(data: jsonData, encoding: .utf8) {
-//                let nsStr = jsonString as NSString
                 let rsaStr = Convert.rsa_private_sign(jsonString)
-                print(rsaStr)
+                print(rsaStr ?? "")
             }
         } catch {
             

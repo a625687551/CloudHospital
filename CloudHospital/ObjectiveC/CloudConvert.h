@@ -37,5 +37,3 @@ struct CloudConvert {
 
 extern struct CloudConvert Convert;
 
-#define NSData_RSA_Private_Sign(data) Convert.data_rsa_private_sign(data)
-
