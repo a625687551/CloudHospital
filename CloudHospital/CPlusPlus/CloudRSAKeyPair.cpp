@@ -79,8 +79,8 @@ void CloudRSAKeyPair::resetKey(const CloudData &data, bool is_public) {
         return;
     }
     
-    const char *head = is_public ? "---BEGIN PUBLIC KEY---\n" : "---BEGIN PRIVATE KEY---\n";
-    const char *tail = is_public ? "\n---END PUBLIC KEY---\n" : "\n---END PRIVATE KEY---";
+    const char *head = is_public ? "-----BEGIN PUBLIC KEY-----\n" : "-----BEGIN PRIVATE KEY-----\n";
+    const char *tail = is_public ? "\n-----END PUBLIC KEY-----\n" : "\n-----END PRIVATE KEY-----";
     const size_t head_len = strlen(head);
     const size_t tail_len = strlen(tail);
     const size_t buf_len = len + head_len + tail_len + 100;

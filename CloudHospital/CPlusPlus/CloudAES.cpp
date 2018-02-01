@@ -32,7 +32,7 @@ void CloudAES::setSecret(const CloudData &data) {
     CC_SHA384(data.bytes(), (CC_LONG)data.length(), (unsigned char *)digest);
     
     aes_key = CloudData(digest, AES_KEY_LEN);
-    aes_iv = CloudData(digest + AES_IV_LEN, AES_KEY_LEN);
+    aes_iv = CloudData(digest + AES_KEY_LEN, AES_IV_LEN);
     
     free(digest);
 }
