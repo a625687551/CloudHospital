@@ -77,13 +77,16 @@ final class DataManager {
     
     func unicodeRequest() {
         let date = Int(Date.init().timeIntervalSince1970 * 1000)
-        let parameters: [String: Any]? = ["terminalType": 2,
+        let parameters: [String: Any]? = ["terminalTime": date,
                                           "devModel": "iPhone",
-                                          "terminalTime": date
+                                          "terminalType": 2
                                           ]
+
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: JSONSerialization.WritingOptions.prettyPrinted)
             if let jsonString = String(data: jsonData, encoding: .utf8) {
+                let nsString = jsonString as NSString                
+                
                 let rsaStr = Convert.rsa_private_sign(jsonString)
                 print(jsonString)
                 print(parameters ?? "")
@@ -92,11 +95,6 @@ final class DataManager {
         } catch {
             
         }
-        
-        
-
-        
-        
         
         Alamofire.request(API.unicodeURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             switch response.result {
