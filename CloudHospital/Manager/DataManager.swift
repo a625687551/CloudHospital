@@ -83,9 +83,21 @@ final class DataManager {
                                           ]
 
         do {
-            let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: [])
             if let jsonString = String(data: jsonData, encoding: .utf8) {
-                let nsString = jsonString as NSString                
+                let nsString = jsonString as NSString
+                let string = nsString.substring(with: NSMakeRange(1, nsString.length - 2))
+                let componets = string.components(separatedBy: ",")
+                
+                let array = ["pushToken","terminalTime","devModel","imei","terminalType","mac","ipAddress"]
+                for key in array {
+                    for str in componets {
+                        
+                    }
+                }
+                
+                
+                
                 
                 let rsaStr = Convert.rsa_private_sign(jsonString)
                 print(jsonString)
