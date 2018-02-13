@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import KeychainAccess
 
 final class DataManager {
     private var baseURL : URL
@@ -34,13 +35,15 @@ final class DataManager {
     typealias CompletionHandler = (Any?, Error?) -> Void
     
     func start(parameters: [String: Any]?, completion: @escaping CompletionHandler) {
-        
-        unicodeRequest()
+        // obtaining an item
+        let keychain = Keychain(service: "com.cloudhospital.session")
+        if let unicode = try? keychain.get("unicode") {
+            headers!["unicode"] = unicode
+        }
         
         let date = Int(Date.init().timeIntervalSince1970 * 1000)
         let rsaStr = Convert.rsa_public_encrypt(String(date))
         headers!["signature"] = rsaStr
-//        headers!["unicode"] = "9081ad35f0744c1289fe1f0451c407c0"
         Alamofire.request(baseURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
 
@@ -82,22 +85,7 @@ final class DataManager {
         let date = Int(Date.init().timeIntervalSince1970 * 1000)
         let parameters: [String: Any]? = ["terminalTime": date,
                                           "devModel": "iPhone",
-                                          "terminalType": 2
-                                          ]
-    
-//        let json = """
-//        {"terminalTime": \(date),"devModel": "iPhone","terminalType": 2}
-//        """
-//        let jsonData = Data(json.utf8)
-//        do {
-//            let t = try JSONDecoder().decode(Unicode.self, from: jsonData)
-//            let e = try JSONEncoder().encode(t)
-//            let s = String(data: e, encoding: .utf8)!
-//            print(s)
-//        } catch {
-//            print(error)
-//        }
-    
+                                          "terminalType": 2]
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: parameters!, options: [])
             if let jsonString = String(data: jsonData, encoding: .utf8) {
@@ -138,48 +126,20 @@ final class DataManager {
             switch response.result {
             case .success(let value):
                 print(value)
+                let json = JSON(value)
+                if let unicode = json["data"]["unicode"].string {
+                    // save item to keychain
+                    let keychain = Keychain(service: "com.cloudhospital.session")
+                    do {
+                        try keychain.set(unicode, key: "unicode")
+                    } catch {
+                        print(error)
+                    }
+                }
+                
             case .failure(let error):
                 print(error)
             }
         }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    func dataAt(parameters: [String: Any]?, completion: @escaping CompletionHandler) {
-        var request = URLRequest(url: baseURL)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            self.didFinishGetData(data: data, response: response, error: error, completion: completion)
-        }.resume()
-    }
-    
-    func didFinishGetData(data: Data?, response: URLResponse?, error: Error?, completion: CompletionHandler) {
-//        if let _ = error {
-//            completion(nil, .failedRequest)
-//        }
-//        else if let data = data, let response = response as? HTTPURLResponse {
-//            if response.statusCode == 200 {
-//                do {
-//                    let decoder = JSONDecoder()
-//                    let homepage = try decoder.decode(Homepage.self, from: data)
-//                    completion(homepage, nil)
-//                } catch {
-//                    completion(nil, .invalidResponse)
-//                }
-//            }
-//            else {
-//                completion(nil, .failedRequest)
-//            }
-//        }
-//        else {
-//            completion(nil, .unknown)
-//        }
     }
 }
