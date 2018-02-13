@@ -19,6 +19,7 @@
 		115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DB9201B12B800213AD9 /* CloudData.cpp */; };
 		115C7DBE201B132C00213AD9 /* CloudRSA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DBC201B132C00213AD9 /* CloudRSA.cpp */; };
 		1166060420214DA100F8B542 /* CloudConvert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1166060320214DA100F8B542 /* CloudConvert.mm */; };
+		1177C58E2032E4C7004A2DA5 /* HomepageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177C58D2032E4C7004A2DA5 /* HomepageModel.swift */; };
 		119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196C51FEB989100B304E5 /* HomepageViewController.swift */; };
 		119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D41FEB9D2F00B304E5 /* MessageViewController.swift */; };
 		119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D61FEB9D4400B304E5 /* ServiceViewController.swift */; };
@@ -101,6 +102,7 @@
 		115C7DC2201B145C00213AD9 /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
 		1166060220214DA100F8B542 /* CloudConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudConvert.h; sourceTree = "<group>"; };
 		1166060320214DA100F8B542 /* CloudConvert.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CloudConvert.mm; sourceTree = "<group>"; };
+		1177C58D2032E4C7004A2DA5 /* HomepageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageModel.swift; sourceTree = "<group>"; };
 		119196C51FEB989100B304E5 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		119196D41FEB9D2F00B304E5 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		119196D61FEB9D4400B304E5 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 		119B13871FFF0BDA00F8F535 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1177C58D2032E4C7004A2DA5 /* HomepageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */,
 				119B13961FFF0E8800F8F535 /* DataManager.swift in Sources */,
 				115C7DB8201B128D00213AD9 /* CloudAES.cpp in Sources */,
+				1177C58E2032E4C7004A2DA5 /* HomepageModel.swift in Sources */,
 				119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
