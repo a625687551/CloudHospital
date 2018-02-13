@@ -7,24 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		111590821FF3749A00A6FC7B /* HomepageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111590811FF3749A00A6FC7B /* HomepageRequest.swift */; };
-		111590871FF47AA200A6FC7B /* HomepageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111590861FF47AA100A6FC7B /* HomepageModel.swift */; };
 		111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */; };
 		111DDF071FE8E4CB00A2C357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF051FE8E4CB00A2C357 /* Main.storyboard */; };
 		111DDF091FE8E4CB00A2C357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF081FE8E4CB00A2C357 /* Assets.xcassets */; };
 		111DDF0C1FE8E4CB00A2C357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111DDF0A1FE8E4CB00A2C357 /* LaunchScreen.storyboard */; };
 		111DDF171FE8E4CB00A2C357 /* CloudHospitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF161FE8E4CB00A2C357 /* CloudHospitalTests.swift */; };
 		111DDF221FE8E4CB00A2C357 /* CloudHospitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DDF211FE8E4CB00A2C357 /* CloudHospitalUITests.swift */; };
-		11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11464A3F1FF1E2360016E56E /* BaseNetwork.swift */; };
-		11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11464A411FF1E2440016E56E /* BaseRequest.swift */; };
 		1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146D943200C9B9500BA467F /* ResponseErrorKind.swift */; };
 		1146D946200C9E2B00BA467F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146D945200C9E2B00BA467F /* String.swift */; };
 		115C7DB8201B128D00213AD9 /* CloudAES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DB6201B128D00213AD9 /* CloudAES.cpp */; };
 		115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DB9201B12B800213AD9 /* CloudData.cpp */; };
 		115C7DBE201B132C00213AD9 /* CloudRSA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115C7DBC201B132C00213AD9 /* CloudRSA.cpp */; };
-		11659CB21FF33CC1004A8271 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11659CB11FF33CC1004A8271 /* BaseResponse.swift */; };
 		1166060420214DA100F8B542 /* CloudConvert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1166060320214DA100F8B542 /* CloudConvert.mm */; };
-		116606062021A3EE00F8B542 /* UnicodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116606052021A3EE00F8B542 /* UnicodeModel.swift */; };
 		119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196C51FEB989100B304E5 /* HomepageViewController.swift */; };
 		119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D41FEB9D2F00B304E5 /* MessageViewController.swift */; };
 		119196D71FEB9D4400B304E5 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119196D61FEB9D4400B304E5 /* ServiceViewController.swift */; };
@@ -81,8 +75,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		111590811FF3749A00A6FC7B /* HomepageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRequest.swift; sourceTree = "<group>"; };
-		111590861FF47AA100A6FC7B /* HomepageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageModel.swift; sourceTree = "<group>"; };
 		111DDEFE1FE8E4CB00A2C357 /* CloudHospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudHospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		111DDF011FE8E4CB00A2C357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		111DDF061FE8E4CB00A2C357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,8 +87,6 @@
 		111DDF1D1FE8E4CB00A2C357 /* CloudHospitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudHospitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		111DDF211FE8E4CB00A2C357 /* CloudHospitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudHospitalUITests.swift; sourceTree = "<group>"; };
 		111DDF231FE8E4CB00A2C357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11464A3F1FF1E2360016E56E /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
-		11464A411FF1E2440016E56E /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		1146D943200C9B9500BA467F /* ResponseErrorKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseErrorKind.swift; sourceTree = "<group>"; };
 		1146D945200C9E2B00BA467F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		115C7DB4201B113900213AD9 /* CloudHospital-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudHospital-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -109,10 +99,8 @@
 		115C7DC0201B145C00213AD9 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
 		115C7DC1201B145C00213AD9 /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
 		115C7DC2201B145C00213AD9 /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
-		11659CB11FF33CC1004A8271 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		1166060220214DA100F8B542 /* CloudConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudConvert.h; sourceTree = "<group>"; };
 		1166060320214DA100F8B542 /* CloudConvert.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CloudConvert.mm; sourceTree = "<group>"; };
-		116606052021A3EE00F8B542 /* UnicodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeModel.swift; sourceTree = "<group>"; };
 		119196C51FEB989100B304E5 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		119196D41FEB9D2F00B304E5 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		119196D61FEB9D4400B304E5 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -517,12 +505,6 @@
 		119B13871FFF0BDA00F8F535 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				111590861FF47AA100A6FC7B /* HomepageModel.swift */,
-				111590811FF3749A00A6FC7B /* HomepageRequest.swift */,
-				11464A3F1FF1E2360016E56E /* BaseNetwork.swift */,
-				11464A411FF1E2440016E56E /* BaseRequest.swift */,
-				11659CB11FF33CC1004A8271 /* BaseResponse.swift */,
-				116606052021A3EE00F8B542 /* UnicodeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -848,15 +830,11 @@
 			files = (
 				119196DF1FEBA54C00B304E5 /* TabBarViewController.swift in Sources */,
 				1166060420214DA100F8B542 /* CloudConvert.mm in Sources */,
-				11464A401FF1E2360016E56E /* BaseNetwork.swift in Sources */,
-				11464A421FF1E2440016E56E /* BaseRequest.swift in Sources */,
 				11EE70751FECDF0A00126EF5 /* HomepageCycleScrollCell.swift in Sources */,
-				116606062021A3EE00F8B542 /* UnicodeModel.swift in Sources */,
 				11921789202052C600B4FA47 /* CloudRSAKeyPair.cpp in Sources */,
 				115C7DBB201B12B800213AD9 /* CloudData.cpp in Sources */,
 				1146D944200C9B9500BA467F /* ResponseErrorKind.swift in Sources */,
 				11EE707B1FECE08F00126EF5 /* HomepageHealthQACell.swift in Sources */,
-				111590821FF3749A00A6FC7B /* HomepageRequest.swift in Sources */,
 				119196DB1FEB9D9D00B304E5 /* MeViewController.swift in Sources */,
 				119B13941FFF0E6C00F8F535 /* Configuration.swift in Sources */,
 				119B13981FFF0EB100F8F535 /* UIColor.swift in Sources */,
@@ -866,7 +844,6 @@
 				111DDF021FE8E4CB00A2C357 /* AppDelegate.swift in Sources */,
 				11EE70641FEC96F500126EF5 /* NavigationViewController.swift in Sources */,
 				1146D946200C9E2B00BA467F /* String.swift in Sources */,
-				11659CB21FF33CC1004A8271 /* BaseResponse.swift in Sources */,
 				119196D51FEB9D2F00B304E5 /* MessageViewController.swift in Sources */,
 				11EE70771FECDFDD00126EF5 /* HomepageRegisteredCell.swift in Sources */,
 				11EE70791FECE03F00126EF5 /* HomepageOtherCell.swift in Sources */,
@@ -876,7 +853,6 @@
 				11EE70731FECDEF100126EF5 /* HomepageConsultationCell.swift in Sources */,
 				119B13961FFF0E8800F8F535 /* DataManager.swift in Sources */,
 				115C7DB8201B128D00213AD9 /* CloudAES.cpp in Sources */,
-				111590871FF47AA200A6FC7B /* HomepageModel.swift in Sources */,
 				119196C61FEB989100B304E5 /* HomepageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

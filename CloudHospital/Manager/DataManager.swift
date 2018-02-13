@@ -24,11 +24,9 @@ final class DataManager {
                                       "Accept-Language": "en;q=1",
                                       "Accept-Encoding": "gzip, deflate",
                                       "User-Agent": "hundsun_cloud_health/2.2.0 (iPhone; iOS 11.2; Scale/3.00)"]
-    
     init(baseURL: URL) {
         self.baseURL = baseURL
     }
-    
     
     static let shared = DataManager(baseURL: API.authenticatedURL)
     
