@@ -10,13 +10,35 @@ import Foundation
 
 struct HomepageModel: Codable {
     let templateCode: String
-    let topButtons: [Any]
-    let middleButtons: [Any]
-    let bottomButtons: [Any]
-    let consButtons: [Any]
-    let banners: [Any]
-    let healthArticles: HealthArticle
+    let topButtons: [AppMenu]
+    struct AppMenu: Codable {
+        let img: String
+        let title: String
+        let subTitle: String
+        let linkType: Int
+        let scheme: String
+        let groupby: Int
+        let minImg: String
+        let minImgStime: String
+        let minImgEtime: String
+        let serverTime: String
+        let enableFlag: String
+    }
+    let middleButtons: [AppMenu]
+    let bottomButtons: [AppMenu]
+    let consButtons: [AppMenu]
     
+    let banners: [AppBanner]
+    struct AppBanner: Codable {
+        let title: String
+        let cover: String
+        let linkType: Int
+        let link: String
+        let scheme: Int
+        let updateTime: String
+    }
+    
+    let healthArticles: HealthArticle
     struct HealthArticle: Codable {
         let pageSize: Int
         let pageNum: Int
@@ -37,6 +59,12 @@ struct HomepageModel: Codable {
         let link: String
     }
     
-    let recommendDocs: [Any]
+    let recommendDocs: [Doctor]
+    struct Doctor: Codable {
+        let docId: Int
+        let name: String
+        let headPhoto: String
+        let sectId: Int
+        let sectName: String
+    }
 }
-
